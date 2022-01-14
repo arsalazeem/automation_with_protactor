@@ -1,12 +1,13 @@
-describe('angularjs homepage todo list', function() {
-    it('should add a todo', function() {
+describe('angularjs homepage todo list',function() {
+    it('should add a todo',async function() {
       browser.get('https://stagingadmin.workerx.co');
       var email=element(by.id('email'));
-       email.sendKeys("arsalazeem@gmail.com");
-      setTimeout(()=>{
-        console.log("Hello world");
-      },80000);
-      
+       email.sendKeys("arsal.azeem@vizteck.com");
+       var password=element(by.id('password'));
+       password.sendKeys("12345678");
+       loginButton=element(by.buttonText('Log In'));
+       loginButton.click();    
+       await browser.sleep(50000);
 
     //   element(by.model('todoList.todoText')).sendKeys('write first protractor test');
     //   element(by.css('[value="add"]')).click();
